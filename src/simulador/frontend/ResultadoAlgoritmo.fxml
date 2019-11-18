@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="607.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simulador.frontend.ControladorResultado">
+   <children>
+      <Label fx:id="titulo" layoutX="277.0" layoutY="31.0" text="ALGORITMO">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla" layoutX="77.0" layoutY="70.0" prefHeight="200.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="nombreProceso" editable="false" prefWidth="75.0" sortable="false" text="Proceso" />
+          <TableColumn fx:id="periodo" editable="false" prefWidth="92.0" sortable="false" text="Periodo (T)" />
+            <TableColumn fx:id="ejecucion" editable="false" prefWidth="147.0" sortable="false" text="T. ejecucion (C)" />
+            <TableColumn fx:id="utilizacion" editable="false" prefWidth="146.0" sortable="false" text="Utilizacion (U=C/T)" />
+            <TableColumn fx:id="prioridad" prefWidth="99.0" text="Prioridad" />
+        </columns>
+      </TableView>
+      <ScrollPane layoutX="77.0" layoutY="318.0" prefHeight="238.0" prefWidth="806.0">
+        <content>
+          <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="806.0">
+               <children>
+                  <Label fx:id="error" layoutX="39.0" layoutY="87.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="planExitoso" layoutX="225.0" layoutY="7.0" text="Planificacion realizada con éxito">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <ImageView fx:id="imagen" cache="true" fitHeight="124.0" fitWidth="229.0" layoutX="662.0" layoutY="70.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@/simulador/frontend/asdasd.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="respuesta" alignment="TOP_LEFT" layoutX="662.0" layoutY="205.0" prefHeight="97.0" prefWidth="261.0" text="Respuesta" textAlignment="JUSTIFY" wrapText="true" />
+      <Label layoutX="181.0" layoutY="280.0" text="Utilizacion global de la CPU:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCPU" layoutX="398.0" layoutY="279.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
